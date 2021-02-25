@@ -1,4 +1,4 @@
-package com.laioffer.onlineShop.entity;
+package onlineShop.entity;
 
 import java.io.Serializable;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.laioffer.onlineShop;
+package onlineShop;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

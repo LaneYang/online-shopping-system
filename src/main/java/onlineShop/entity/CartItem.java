@@ -1,4 +1,4 @@
-package com.laioffer.onlineShop.entity;
+package onlineShop.entity;
 
 
 

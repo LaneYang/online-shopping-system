@@ -1,7 +1,9 @@
-package com.laioffer.onlineShop.entity;
+package onlineShop.entity;
+
 
 
 import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,20 +12,21 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="billingaddress")
-public class BillingAddress implements Serializable {
-  private static final long serialVersionUID = 1028098616457762743L;
+@Table(name = "shippingaddress")
+public class ShippingAddress implements Serializable {
+
+  private static final long serialVersionUID = 7551999649936522523L;
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private int id;
+  private String address;
   private String city;
   private String state;
   private String zipcode;
   private String country;
-  private String address;
 
-  @OneToOne(mappedBy = "billingAddress")
+  @OneToOne(mappedBy = "shippingAddress")
   private Customer customer;
 
   public int getId() {
@@ -32,6 +35,14 @@ public class BillingAddress implements Serializable {
 
   public void setId(int id) {
     this.id = id;
+  }
+
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
   }
 
   public String getCity() {
@@ -64,14 +75,6 @@ public class BillingAddress implements Serializable {
 
   public void setCountry(String country) {
     this.country = country;
-  }
-
-  public String getAddress() {
-    return address;
-  }
-
-  public void setAddress(String address) {
-    this.address = address;
   }
 
   public Customer getCustomer() {

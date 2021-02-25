@@ -1,4 +1,4 @@
-package com.laioffer.onlineShop;
+package onlineShop;
 
 import java.util.Properties;
 import javax.sql.DataSource;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
-// TODO: 2/24/21  
+// TODO: 2/24/21
 @Configuration
 public class ApplicationConfig {
 
@@ -25,9 +25,9 @@ public class ApplicationConfig {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName("com.mysql.jdbc.Driver");
     // 只需要修改红色部分, 保留其他内容
-    dataSource.setUrl("jdbc:mysql://YOUR_RDS_INSTANCE:3306/ecommerce?createDatabaseIfNotExist=true&serverTimezone=UTC");
-    dataSource.setUsername("USERNAME");
-    dataSource.setPassword("PASSWORD");
+    dataSource.setUrl("jdbc:mysql://xxxxxxxxxxx:3306/ecommerce?createDatabaseIfNotExist=true&serverTimezone=UTC");
+    dataSource.setUsername("xxxx");
+    dataSource.setPassword("xxxxxxx");
 
     return dataSource;
   }

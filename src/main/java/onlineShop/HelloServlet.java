@@ -1,4 +1,4 @@
-package com.laioffer.onlineShop;
+package onlineShop;
 
 import java.io.*;
 import javax.servlet.http.*;
