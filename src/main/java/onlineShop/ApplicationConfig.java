@@ -6,9 +6,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 // TODO: 2/24/21
 @Configuration
+@EnableWebMvc
+
 public class ApplicationConfig {
 
   @Bean(name = "sessionFactory")
@@ -25,9 +28,9 @@ public class ApplicationConfig {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName("com.mysql.jdbc.Driver");
     // 只需要修改红色部分, 保留其他内容
-    dataSource.setUrl("jdbc:mysql://xxxxxxxxxxx:3306/ecommerce?createDatabaseIfNotExist=true&serverTimezone=UTC");
-    dataSource.setUsername("xxxx");
-    dataSource.setPassword("xxxxxxx");
+    dataSource.setUrl("jdbc:mysql://onlineshopdb.cucrag2zp7wh.us-east-2.rds.amazonaws.com:3306/ecommerce?createDatabaseIfNotExist=true&serverTimezone=UTC");
+    dataSource.setUsername("admin");
+    dataSource.setPassword("");
 
     return dataSource;
   }
