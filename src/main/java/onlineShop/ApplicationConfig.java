@@ -23,6 +23,16 @@ public class ApplicationConfig {
     return sessionFactory;
   }
 
+//  @Bean(name = "serverLogger")
+//  public Logger logger() {
+//    return new ServerLogger();
+//  }
+//
+//  @Bean(name = "pageLogger")
+//  public Logger pagelogger() {
+//    return new PageLogger();
+//  }
+
   @Bean(name = "dataSource")
   public DataSource dataSource() {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
